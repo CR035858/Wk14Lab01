@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="aqua">
+<center>
+<h3>Successful Login!!!</h3>
+<h1>Welcome to Students Data Management Page</h1>
+<table border="2">
+	<tr>
+		<td colspan="2">Students Data Management Operations</td>
+	</tr>
+	<tr>
+		<td>Go To Students Academic Details Mgmt Page</td>
+		<td><a th:href="@{showStudentDetails}">Student Details...</a>(Still Not Implemented)</td>
+	</tr>
+	<tr>
+		<td>Go To Students Regn Details Mgmt Page</td>
+		<td><a th:href="@{showRegnDetails}">Student Regn Details...</a></td>
+	</tr>
+	
+</table>
+<h4><a th:href="@{login}">Go Back To Home Page...</a> </h4>
+
+</center>
+</body>
+</html>
