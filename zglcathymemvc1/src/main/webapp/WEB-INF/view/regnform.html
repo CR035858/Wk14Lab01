@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="#" th:action="@{/greet/register}" method="POST" th:object="${user}">
+<!-- String userName;
+	String password;
+	String gender;
+	String employed; -->
+	<table>
+	<tr><td>User Name</td><td> <input type="text" th:field="*{userName}" /></td></tr>
+	</table>
+	</br>
+	Password <input type="password" th:field="*{password}" /></br>
+	Gender Male<input type="radio" value="male" th:field="*{gender}" /></br>
+	Female<input type="radio" value="female" th:field="*{gender}" /></br>
+	Employed Yes <input type="checkbox" value="yes" th:field="*{employed}" /></br>
+	 No<input type="checkbox" value="no" th:field="*{employed}" /></br>
+	 <select th:field="*{city}">
+	 	<option th:each="city:${cities}" th:value="${city}" th:text="${city}"/>
+	 </select>
+	  Travelling<input type="checkbox" value="Travelling" th:field="*{hobbies}" />
+	    Singing<input type="checkbox" value="Singing" th:field="*{hobbies}" />
+	      Cycling<input type="checkbox" value="Cycling" th:field="*{hobbies}" />
+	        Hiking<input type="checkbox" value="Hiking" th:field="*{hobbies}" />
+	 <input type="submit" value="register" />
+</form>
+</body>
+</html>

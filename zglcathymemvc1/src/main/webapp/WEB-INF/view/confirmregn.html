@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+User Name<span th:text="${user.userName}"></span>
+Password<span th:text="${user.password}"></span>
+Gender<span th:text="${user.gender}"></span>
+Employed<span th:text="${user.employed}"></span>
+City <span th:text=${user.city}></span>
+<ul th:each="hob:${user.hobbies}">
+<li th:text="${hob}">
+</ul>
+<a href="/zglcathymemvc1/index.jsp">Go To Main Page</a>
+</body>
+</html>
