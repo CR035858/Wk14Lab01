@@ -1,0 +1,47 @@
+Day 01
+Maven Overview, 
+Maven Implementation Part 1 - Create a maven project using archetype	
+Break 	
+DispatcherServlet manual configuration using ServletInitializer
+
+Day 02
+Maven Implementation Part 2 - thymeleaf introduction	
+Break 	
+Maven Implementation Part 3 - thymeleaf form based project
+
+Day03
+Maven Project with Hbernate CRUD - Read and Create	
+Break 	
+Maven Project with Hbernate CRUD - Read and Create
+
+Day04
+Maven Project with Hbernate CRUD - Update and Delete	
+Break 	
+Maven Project with Hbernate CRUD - Update and Delete
+----------------------------
+===================================================
+
+
+MAVEN PROJECT			vs DYNAMIC WEB PROJECT
+HIbernate					Hibernate
+Thymeleaf   vs JSP	(XML)			JSP
+Configuration
+Class-Config vs XML[dispatcher+db] vs 
+Thymeleaf	        [dispatcher+hibernate]
+		springboot+thymeleaf
+		springboot+
+
+
+Maven+JSP+Hibernate+XML config]
+---------------------------------------------------------------------------------
+int id;//text
+	String studentName;//text
+	String studentAddress;//textarea
+	String parentMobile;//text
+	String parentFname;//text
+	String parentMname;//text
+	String studentEmail; //text
+	String grade;//drop down
+	String section; // drop down
+	String gender;//radio
+	String[] hobbies;//checkBox

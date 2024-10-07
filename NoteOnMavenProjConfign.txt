@@ -1,0 +1,47 @@
+Maven Project With 
+Thymeleaf+html
+Configuration Based on "Configuration class"
+[Not used spring-servlet.xml+web.xml configuration]
+
+
+Once we start using spring-servlet.xml, it expects all configuration from XML
+but thymeleaf configuration is 
+better is via springboot project where configuration which is automatic,
+but if we use thymeleaf configuration explicitly in Maven Project (with Spring MVC dependency in pom) 
+it may not get compatibility, 
+hence manual configuration through class is expected, but then DB configuration cant be dependent on 
+XML configuration,because(web.xml)  it is configuring through dispatcherservlet ,
+so we cannot do 50-50 configuration in class + xml
+therefore
+all configurations thymeleaf-template resolver Plus DB configuration done
+in Class
+WHEN A PURE SPRINGBOOT Project is created 
+auto configuration happens for Thymeleaf and db configuration can happen in resources - application.properties.xml
+--------------------
+TIPS ON MAVEN - THYMELEAF - CONFIGURATION CLASS BASED - MAVEN-ARCHETYPE-WEB 1.4
+Maven Project internally created
+in JDK 17 did not change it to 1.8
+REF POM.xml for dependencies
+
+IN CONFIGURATION CLASS NOTE THE FOLLOWING POINTS
+import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
+// used as in pers lap top - "fix project setup" if error for the above import 
+//Use above import  and  not the below one
+//import org.apache.commons.dbcp2.BasicDataSource;
+
+USE the following dependency in pom.xml
+
+<!-- BasicDataSource -->
+		<dependency>
+		  <groupId>org.apache.commons</groupId>
+		  <artifactId>commons-dbcp2</artifactId>
+		  <version>2.10.0</version>
+		</dependency>
+
+ 1) Working Sample with DB Connectivity Check with above spec
+[Class Configuration for thymeleaf templateviews & DB]
+Schoolms2
+-------------
+Lab Day 01 ---- SchoolmsDay01 [Working Project Ready]
+Lab Day 02 ---- SchoolmsDay02 [Working Project Ready]
+Lab Day 03 ---- SchoolmsDay03 [Work in Progress]

@@ -1,0 +1,77 @@
+ROUGH NOTE
+StudentRegnDetails
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
+	int id;
+	
+	@Column(name="userName")
+	String userName;
+	
+	@Column(name="password")
+	String password;
+	
+	@Column(name="studentName")
+	String studentName;//text
+	
+	@Column(name="studentAddress")
+	String studentAddress;//textarea
+	
+	@Column(name="parentMobile")
+	String parentMobile;//text
+	
+	@Column(name="parentFname")
+	String parentFname;//text
+	
+	@Column(name="parentMname")
+	String parentMname;//text
+	
+	@Column(name="studentEmail")
+	String studentEmail; //text
+	
+	@Column(name="grade")
+	String grade;//drop down
+	
+	@Column(name="section")
+	String section; // drop down
+	
+	@Column(name="gender")
+	String gender;//radio
+	
+	@Column(name="hobbies")
+	String[] hobbies;//checkBox
+
+StudentDEtails
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
+	int id;
+	
+	@Column(name="studentfName")
+	String studentfName;
+	
+	@Column(name="studentlName")
+	String studentlName;
+	
+	@Column(name="grade")
+	String grade;
+	
+	@Column(name="section")
+	String section;
+	
+	@Column(name="classTeacher")
+	String classTeacher;
+	
+	@Column(name="subjects")
+	String[] subjects;
+	
+	@Column(name="maxScore")
+	int maxScore;
+	
+	@Column(name="totalScore")
+	int totalScore;
+	
+
+
+https://stackoverflow.com/questions/47406346/org-springframework-expression-spel-spelevaluationexception-el1007e-property-o

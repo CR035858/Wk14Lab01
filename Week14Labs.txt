@@ -1,0 +1,123 @@
+Week 14 Lab 
+Day 01
+Creating Maven Based Application using Archetype + Configuration
+without xml file and instead a Configuration class
+Html or Thymeleaf
+
+
+Day 02
+Maven Implementation + Thymeleaf Based form
+
+
+Day 03
+Maven Project with Crud ( 2 operations + form)
+Create+Read
+
+Day 04
+Maven Project with Crud ( 2 operations + form)
+Update Delete
+
+===================================================
+Outline
+In the following scenario , you are working for a school IT Solution s Team , which is wildly in an automation spree
+as part of this, You are supposed to create a Maven Based Web Project to Manage all the student Details with the feature
+to perform all the CRUD operations on Student details.
+This is created in an incremented model through the entire week lab sessions
+For this Project Maven Project is to be Created using archetype
+Views are to be created using Thymeleaf.
+
+				DAY 01:
+1) Create a Maven Based application for a School using Maven Archetype from the scratch,
+This app  does not implement configuration through XML files instead , 
+configurations have to be implemented using 
+"AbstractAnnotationConfigDispatcherServletInitializer"
+
+
+Following are the Pages that are to be loaded
+Home Page - Should display a welcome message, with the links for the following pages
+Link to Registration Page - at present the "RegistrationPage"  should just display "Welcome to Regn Page!!!"
+Link to Login Page - should take the user to the login Page - should just display "Welcome to Login Page" 
+
+Controller for the same with the apt RequestMappings are to be created.(On Day 2 Business Layers would be added)
+for Both the Pages, options should be available to Go Back to Home Page
+
+				DAY 02
+
+Continuing the Project that was created on Day 01, 
+
+Project structure is to be set up for the model,service,controller dao layers
+
+For the moment the  Login credentials are to be hard coded, later
+that would be validated with the data that is pulled from the Database end
+RegistrationForm to be created to display Registration Details - DB Connectivity would be done later on Day 3 & 4
+
+Login Page:
+DAO Layer should contain the logic to validate credentials of the details entered in the Login Page(Currently hardcoded ) 
+Service Layer - should contain the Business logic to invoke the DAO methods which were not implemented with Business Logic earlier, 
+which in turn should be invoked by the Controller
+
+Registration Page:
+Should accept the Registration details and display it in "Confirmation Page" DB connectivity is to be done on 3rd Day
+
+The Tables and Column details for the Login, StudentRegn & Student entities.
+
+Login 		StudentRegn	StudentDetails
+
+id int primary key	id int primary key	id int primary key [THIS IS MODIFIED pl look below given schema]
+username		username		studentfName varchar
+password		password		studentlName varchar
+(all other fields	studentName		grade varchar
+varchar with		studentAddress		section varchar
+apt sizes)		parentMobile		classTeacher varchar, subjects varchar,MaxScore int,Totalscore int
+			parentfName		(all other fields
+			parentmName		varchar with
+			studenteMail		apt sizes)	
+			grade	
+			section
+			gender
+			hobbies
+			(all other fields
+			varchar with
+			apt sizes)	
+Back End tables too are to be created with the above fields & datatypes correspondingly
+
+
+
+[Since we are focussing on Maven Project & Crud Operations, few redundant columns are allowed here,
+actually these would be fine tuned during the Database Design, for the current scenario it is accepted]
+P.S: Pl Do not get confused between StudentDetails & StudentRegnDetails as mentioned above even if few columns are duplicated
+"StudentDetails" data is related to the Student Class,Session , Subject & Performance Details
+whereas "StudentRegn" data is related to the Basic Student information i.e used to Register the Student in the Site 
+
+
+				Day 03
+The Pages LoginPage & RegnPage should be connected to DB to validate the Login Details and allow Students to Register,
+During Registration, The Registration Details should be stored in DB and the  LoginID & Password column details entered through Registration Details 
+should be automatically inserted into Login table and when Logged in , the details should be validated through this Login table.
+Facility should be made to Update & Delete Registration details, since Registration Details are accepted and inserted during the registration,
+in the StudentRegistrationList page update & delete options are sufficient enough and no option add "RegistrationDetails" is required
+(assumed to be the role of admin, though role based logins are not defined at this stage)
+
+				Day 04
+In continuation to the Day 03  Project
+In this Iteration, CRUD Operations should facilitated for the "StudentDetails"
+Students' Details should be allowed to be Read, Inserted, Modified & Deleted - Through database (CRUD)
+"StudentDetailsList" Page should list all "StudentDetails" records along with the options to Add, Update & Delete
+The Project that was created on Day 03 should be incremented to perform the above operations
+Finally On day 4 the facilties that are made available in consolidated manner are as follows:
+Login & StudentRegistration (Along with DB based validation & registration)
+StudentRegistration Details Update & Deletion
+StudentDetails (Insert,Read,Update & Delete)
+
+/* 
+StudentDetails Modified
+id int primary key
+studentfName varchar
+studentlName varchar
+grade varchar
+section varchar
+classTeacher varchar, 
+subjects varchar,
+MaxScore int,
+Totalscore int
+*/
