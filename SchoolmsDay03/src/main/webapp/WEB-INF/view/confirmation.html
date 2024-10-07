@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="yellow">
+<center>
+
+<h2>You Are Registered Successfully...pl confirm and go To Login Page...</h2>
+<table border="2">
+<tr><td colspan="2">Confirmation Page!!!</td></tr>
+<tr><td>User Name</td><td><span th:text="${studentRegn.userName}" ></span></td></tr>
+<tr><td>Password</td><td><span th:text="${studentRegn.password}"></span></td></tr>
+<tr><td>Student Name</td><td><span th:text="${studentRegn.studentName}"></span></td></tr>
+<tr><td>Student Address</td><td><span th:text="${studentRegn.studentAddress}"></span></td></tr>
+<tr><td>Parent Mobile</td><td><span th:text="${studentRegn.parentMobile}"></span></td></tr>
+<tr><td>Parent Fathers Name</td><td><span th:text="${studentRegn.parentFname}"></span></td></tr>
+<tr><td>Parent Mothers Name</td><td><span th:text="${studentRegn.parentMname}"></span></td></tr>
+<tr><td>Student eMail</td><td><span th:text="${studentRegn.studentEmail}"></span></td></tr>
+<tr><td>Grade</td><td><span th:text="${studentRegn.grade}"></span></td></tr>
+<tr><td>Section</td><td><span th:text="${studentRegn.section}"></span></td></tr>
+<tr><td>Gender</td><td><span th:text="${studentRegn.gender}"></span></td></tr>
+<tr><td>Hobbies</td><td>
+<ul th:each="hob:${studentRegn.hobbies}">
+<li th:text="${hob}"/>
+</ul>
+</td></tr>
+</table>
+<h3><a th:href="@{login}">Go To Login Page...</a> </h3>
+<h3><a th:href="@{register}">Go To Registration Page...</a></h3>
+</center>
+</body>
+</html>

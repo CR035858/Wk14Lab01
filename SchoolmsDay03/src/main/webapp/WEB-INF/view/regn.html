@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	
+									<--DUMMY PAGE NOT USED IN THE PROJECT-->
+	
+	
+	
+	
+<form action="#" th:action="@{/greet/processRegn}" method="POST" th:object="${studRegn}">
+
+	<table>
+	<tr><td>User Name</td><td> <input type="text" th:field="*{studentName}" /></td></tr>
+	</table>
+	</br>
+
+	Gender Male<input type="radio" value="male" th:field="*{gender}" /></br>
+	Female<input type="radio" value="female" th:field="*{gender}" /></br>
+	
+	 <select th:field="*{grade}">
+	 	<option th:each="grade:${grades}" th:value="${grade}" th:text="${grade}"/>
+	 </select>
+	  Travelling<input type="checkbox" value="Travelling" th:field="*{hobbies}" />
+	    Singing<input type="checkbox" value="Singing" th:field="*{hobbies}" />
+	      Cycling<input type="checkbox" value="Cycling" th:field="*{hobbies}" />
+	        Hiking<input type="checkbox" value="Hiking" th:field="*{hobbies}" />
+	 <input type="submit" value="register" />
+</form>
+</body>
+</html>

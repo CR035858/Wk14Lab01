@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="lightgreen">
+<center>
+<h1> <span th:text = "'Hello, ' + ${loginmsg}"></span></h1>
+
+<form  action="#" th:action="@{login}" method="Post" th:object="${login}">
+	<h3><span th:text="${loginsuccess}"></span></h3>
+<table border="2">
+<tr><td colspan="2">Login Details...</td></tr>
+<tr>
+<td>id</td>
+<td><input type="hidden" th:field="*{id}" /></td>
+</tr>
+<tr>
+<td>Login ID</td>
+<td><input type="text" th:field="*{userName}" /></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" th:field="*{password}" /></td>
+</tr>
+<tr>
+<td><input type="submit" value="Submit..." /></td>
+<td><input type="reset" value="ReSet..." /></td>
+</tr>
+
+</table>
+
+</form>
+<a th:href="@{sayHello}">Go Back To Home Page!!!</a>
+
+<h3><a th:href="@{login}">Go To Login Page...</a> </h3>
+<h3><a th:href="@{register}">Go To Registration Page...</a></h3>
+</center>
+</body>
+</html>
